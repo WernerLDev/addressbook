@@ -1,0 +1,91 @@
+.row {
+    padding: 10px 0 10px 15px;
+    margin-right: 15px;
+    min-height: 35px;
+    @media screen and (max-width: $break-large) {
+        margin-left: 15px;
+        padding-left: 0;
+    }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.detailhead {
+    margin: 15px 0 25px 0; height: auto;
+    @media screen and (max-width: $break-large) {
+        margin: 15px 15px 0 15px;
+    }
+}
+
+.photowrapper {
+    width: 100px; height: 100px;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: $break-large) {
+        width: 80px; height: 80px;
+    }
+}
+
+.contactphoto {
+    position: absolute; top: 0; left: 0;
+    border-radius: 50px;
+    @media screen and (max-width: $break-large) {
+        width: 80px; height: 80px;
+    }
+}
+
+
+.viewmode { display: block; }
+.editmode { display: none; }
+
+
+
+.borderbottom { border-bottom: 1px solid $light-gray-color; }
+
+.col-left {
+    width: 150px;
+    float: left; 
+    text-align: right; font-size: 22px; font-family: $default-font-light;
+    color: $gray-text-color;
+    @media screen and (max-width: $break-large) {
+        font-size: 18px; text-align: left;
+        width: 100%; float: none;
+        padding-bottom: 5px;
+    }
+}
+
+.col-right {
+    padding-left: 180px;
+    font-size: 22px; font-family: $default-font; color: #666;
+    @media screen and (max-width: $break-large) {
+        font-size: 18px;
+        width: 100%; float: none;
+        padding-left: 0;
+    }
+}
+
+.favorite-btn {
+    position: absolute; top: 15px; right: 15px;
+    display: block; width: 50px; height: 50px; 
+    background: url('../images/icons/favorite_inactive.svg') no-repeat;
+    @media screen and (max-width: $break-large) {
+        width: 30px; height: 30px;
+        background-size: 30px 30px;
+    }
+}
+
+.favorite-btn-active {
+    position: absolute; top: 15px; right: 15px;
+    display: block; width: 50px; height: 50px;
+    background: url('../images/icons/favorite_active.svg') no-repeat;
+    @media screen and (max-width: $break-large) {
+        width: 30px; height: 30px;
+        background-size: 30px 30px;
+    }
+}
+
+

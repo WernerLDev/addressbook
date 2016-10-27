@@ -1,0 +1,93 @@
+body {
+    font-family: $default-font;
+    font-size: 16px;
+    color: $black-color;
+}
+
+h1 {
+    font-family: $default-font-light;
+    font-size: 36px;
+    font-weight: lighter;
+    @media screen and (max-width: $break-large) {
+        font-size: 22px;
+    }
+}
+
+.menu-desktop {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 150px;
+    background: $desktop-menu-color;
+    @media screen and (max-width: $break-large) {
+        display: none;
+    }
+}
+
+.contact-list {
+    position: absolute; top: 0; left: 150px; bottom: 0; 
+    width: 300px;
+    border-right: 1px solid $light-gray-color;
+    @media screen and (max-width: $break-large) {
+        right: 0; left: 0;
+        width: auto;
+        border-right: 0px;
+    }
+}
+
+.contact-detail {
+    display: none;
+    opacity: 0;
+    position: absolute; top: 0; left: 465px; right: 0; bottom: 0;
+    padding-top: 15px;
+    @media screen and (max-width: $break-large) {
+        left: 0px;
+        padding-top: 0;
+        background: #FFF;
+        .scroll-pane { top: 50px; }
+    }
+    
+}
+
+.scroll-pane {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 80px;
+    overflow-y: auto;
+}
+
+.content {
+    padding: 15px;
+}
+
+.mobile-header {
+    display: none;
+    @media screen and (max-width: $break-large) {
+        display: block;
+        background: $light-gray-color;
+        height: 50px;
+    }
+    
+    a.back {
+        background: url('../images/icons/back.png') no-repeat;
+        background-size: 50px 50px; background-position: left center;
+        padding-left: 40px;
+        line-height: 50px; color: #000; text-decoration: none;
+    }
+    
+}
+
+
+.loading {
+    display: none;
+    position: absolute; bottom: 25px; left: (150 / 2) - 30px;
+}
+
+
+.whitespace-wrap { white-space: pre-wrap; }
+
+
+
+
+
+
+
+
+
+

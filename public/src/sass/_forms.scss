@@ -1,0 +1,67 @@
+.filechoose {
+    display: block;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    padding-top: 25px;
+    text-align: center; color: #000; font-size: 18px;
+    background: #FFF; opacity: 0.6; border-radius: 50px;
+    @media screen and (max-width: $break-large) {
+        padding-top: 20px;
+        font-size: 16px;
+    }
+}
+
+.uploadinput {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.uploadgif {
+    display: none;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+input {
+    margin: 0; padding: 0 0 5px 0;
+    border: 0;
+    border-bottom: 1px solid $gray-text-color;
+    width: 100%; font-size: 22px; font-family: $default-font; color: $gray-text-color;
+    @media screen and (max-width: $break-large) {
+        box-sizing: border-box;
+        font-size: 18px;
+        height: 25px;
+    }
+}
+
+input:focus, textarea:focus { color: #666; }
+
+textarea {
+    margin: 0; padding: 0 0 5px 0;
+    border: 0;
+    border-bottom: 1px solid $gray-text-color;
+    width: 100%; height: 100px; font-size: 22px; font-family: $default-font; color: $gray-text-color;
+    @media screen and (max-width: $break-large) {
+        box-sizing: border-box;
+        height: 80px;
+        font-size: 18px;
+    }
+}
+
+:invalid {
+    box-shadow: none;
+    border-bottom: 1px solid #ff0000; color: #ff0000;
+}
+
+.contactname > input {
+    margin-top: 30px;
+    height: 35px; font-size: 36px; font-family: $default-font-light;
+    @media screen and (max-width: $break-large) {
+        margin: 15px 0 10px 0;
+        height: 30px; font-size: 22px;
+    }
+}
+

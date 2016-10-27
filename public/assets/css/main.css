@@ -1,0 +1,494 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/helveticaneue/HelveticaNeue.eot");
+  src: url("../fonts/helveticaneue/HelveticaNeue.woff2") format("woff2"), url("../fonts/helveticaneue/HelveticaNeue.woff") format("woff"), url("../fonts/helveticaneue/HelveticaNeue.ttf") format("truetype"), url("../fonts/helveticaneue/HelveticaNeue.svg#HelveticaNeue") format("svg"), url("../fonts/helveticaneue/HelveticaNeue.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url("../fonts/helveticaneuelight/HelveticaNeueLight.eot");
+  src: url("../fonts/helveticaneuelight/HelveticaNeueLight.woff2") format("woff2"), url("../fonts/helveticaneuelight/HelveticaNeue-Light.woff") format("woff"), url("../fonts/helveticaneuelight/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuelight/HelveticaNeue-Light.ttf") format("truetype"), url("../fonts/helveticaneuelight/HelveticaNeue-Light.svg#HelveticaNeue-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/***
+Default colors and fonts and stuff.
+***/
+/* Point where app switches from desktop to smartphone version */
+body {
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 16px;
+  color: #000000; }
+
+h1 {
+  font-family: "HelveticaNeueLight", sans-serif;
+  font-size: 36px;
+  font-weight: lighter; }
+  @media screen and (max-width: 720px) {
+    h1 {
+      font-size: 22px; } }
+
+.menu-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  background: #c8ebf1; }
+  @media screen and (max-width: 720px) {
+    .menu-desktop {
+      display: none; } }
+
+.contact-list {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  bottom: 0;
+  width: 300px;
+  border-right: 1px solid #f3f3f3; }
+  @media screen and (max-width: 720px) {
+    .contact-list {
+      right: 0;
+      left: 0;
+      width: auto;
+      border-right: 0px; } }
+
+.contact-detail {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 465px;
+  right: 0;
+  bottom: 0;
+  padding-top: 15px; }
+  @media screen and (max-width: 720px) {
+    .contact-detail {
+      left: 0px;
+      padding-top: 0;
+      background: #FFF; }
+      .contact-detail .scroll-pane {
+        top: 50px; } }
+
+.scroll-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  overflow-y: auto; }
+
+.content {
+  padding: 15px; }
+
+.mobile-header {
+  display: none; }
+  @media screen and (max-width: 720px) {
+    .mobile-header {
+      display: block;
+      background: #f3f3f3;
+      height: 50px; } }
+  .mobile-header a.back {
+    background: url("../images/icons/back.png") no-repeat;
+    background-size: 50px 50px;
+    background-position: left center;
+    padding-left: 40px;
+    line-height: 50px;
+    color: #000;
+    text-decoration: none; }
+
+.loading {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 45px; }
+
+.whitespace-wrap {
+  white-space: pre-wrap; }
+
+ul.buttonbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: #666666; }
+  ul.buttonbar li {
+    display: block;
+    float: left;
+    width: 120px;
+    padding: 0 15px;
+    height: 80px; }
+    @media screen and (max-width: 720px) {
+      ul.buttonbar li {
+        padding: 0;
+        width: 33%; } }
+    ul.buttonbar li a {
+      display: block;
+      width: 100%;
+      height: 27px;
+      padding: 53px 0 0 0;
+      color: #FFF;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: normal;
+      color: #FFF;
+      text-align: center; }
+  ul.buttonbar li.add {
+    background: url("../images/icons/add.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.contacts {
+    background: url("../images/icons/contacts.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.favorites {
+    background: url("../images/icons/favorits.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.call {
+    background: url("../images/icons/call.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.email {
+    background: url("../images/icons/mail.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.edit {
+    background: url("../images/icons/edit.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.delete {
+    background: url("../images/icons/delete.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.save {
+    background: url("../images/icons/save.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar li.right {
+    float: right; }
+  ul.buttonbar li.desktop-center {
+    margin: 0 auto;
+    float: none; }
+    @media screen and (max-width: 720px) {
+      ul.buttonbar li.desktop-center {
+        margin: 0;
+        float: left; } }
+  ul.buttonbar li.mobile-only {
+    display: none; }
+    @media screen and (max-width: 720px) {
+      ul.buttonbar li.mobile-only {
+        display: block; } }
+  ul.buttonbar li.active {
+    background-color: #999999; }
+
+ul.buttonbar-vertical {
+  position: static;
+  background: none; }
+  ul.buttonbar-vertical li {
+    width: 100%;
+    float: none;
+    padding: 0; }
+    ul.buttonbar-vertical li a {
+      color: #666666; }
+  ul.buttonbar-vertical li.contacts {
+    background: url("../images/icons/contactsgray.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar-vertical li.favorites {
+    background: url("../images/icons/favorite_inactive.svg") no-repeat;
+    background-size: 40px 40px;
+    background-position: center 8px; }
+  ul.buttonbar-vertical li.active {
+    background-color: #e8f2f4; }
+
+.contact-list .searchcontacts {
+  box-sizing: border-box;
+  height: 50px;
+  text-align: center;
+  border-bottom: 2px solid #f3f3f3; }
+  .contact-list .searchcontacts input[type=text] {
+    width: 70%;
+    height: 25px;
+    margin-top: 11px;
+    padding: 0 10px;
+    font-size: 13px;
+    text-align: center;
+    border: 2px solid #f3f3f3;
+    border-radius: 4px; }
+
+.contact-list .scroll-pane {
+  top: 50px; }
+
+.contact-list ul.list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; }
+  .contact-list ul.list li {
+    display: block;
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 80px; }
+    .contact-list ul.list li img {
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      float: left;
+      border-radius: 25px; }
+    .contact-list ul.list li .contact-name {
+      float: left; }
+  .contact-list ul.list li:hover {
+    cursor: pointer; }
+  .contact-list ul.list li.favorite {
+    background: url("../images/icons/favorite.png") no-repeat;
+    background-position: center right; }
+  .contact-list ul.list li:nth-child(odd) {
+    background-color: #fff; }
+  .contact-list ul.list li:nth-child(even) {
+    background-color: #f3f3f3; }
+  .contact-list ul.list li.active {
+    background-color: #e8f2f4;
+    border-right: 3px solid #c8ebf1;
+    border-left: 3px solid #c8ebf1; }
+
+.row {
+  padding: 10px 0 10px 15px;
+  margin-right: 15px;
+  min-height: 35px; }
+  @media screen and (max-width: 720px) {
+    .row {
+      margin-left: 15px;
+      padding-left: 0; } }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.detailhead {
+  margin: 15px 0 25px 0;
+  height: auto; }
+  @media screen and (max-width: 720px) {
+    .detailhead {
+      margin: 15px 15px 0 15px; } }
+
+.photowrapper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden; }
+  @media screen and (max-width: 720px) {
+    .photowrapper {
+      width: 80px;
+      height: 80px; } }
+
+.contactphoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px; }
+  @media screen and (max-width: 720px) {
+    .contactphoto {
+      width: 80px;
+      height: 80px; } }
+
+.viewmode {
+  display: block; }
+
+.editmode {
+  display: none; }
+
+.borderbottom {
+  border-bottom: 1px solid #f3f3f3; }
+
+.col-left {
+  width: 150px;
+  float: left;
+  text-align: right;
+  font-size: 22px;
+  font-family: "HelveticaNeueLight", sans-serif;
+  color: #999999; }
+  @media screen and (max-width: 720px) {
+    .col-left {
+      font-size: 18px;
+      text-align: left;
+      width: 100%;
+      float: none;
+      padding-bottom: 5px; } }
+
+.col-right {
+  padding-left: 180px;
+  font-size: 22px;
+  font-family: "HelveticaNeue", sans-serif;
+  color: #666; }
+  @media screen and (max-width: 720px) {
+    .col-right {
+      font-size: 18px;
+      width: 100%;
+      float: none;
+      padding-left: 0; } }
+
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../images/icons/favorite_inactive.svg") no-repeat; }
+  @media screen and (max-width: 720px) {
+    .favorite-btn {
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px; } }
+
+.favorite-btn-active {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../images/icons/favorite_active.svg") no-repeat; }
+  @media screen and (max-width: 720px) {
+    .favorite-btn-active {
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px; } }
+
+.filechoose {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 25px;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  background: #FFF;
+  opacity: 0.6;
+  border-radius: 50px; }
+  @media screen and (max-width: 720px) {
+    .filechoose {
+      padding-top: 20px;
+      font-size: 16px; } }
+
+.uploadinput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0; }
+
+.uploadgif {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+input {
+  margin: 0;
+  padding: 0 0 5px 0;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  width: 100%;
+  font-size: 22px;
+  font-family: "HelveticaNeue", sans-serif;
+  color: #999999; }
+  @media screen and (max-width: 720px) {
+    input {
+      box-sizing: border-box;
+      font-size: 18px;
+      height: 25px; } }
+
+input:focus, textarea:focus {
+  color: #666; }
+
+textarea {
+  margin: 0;
+  padding: 0 0 5px 0;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  width: 100%;
+  height: 100px;
+  font-size: 22px;
+  font-family: "HelveticaNeue", sans-serif;
+  color: #999999; }
+  @media screen and (max-width: 720px) {
+    textarea {
+      box-sizing: border-box;
+      height: 80px;
+      font-size: 18px; } }
+
+:invalid {
+  box-shadow: none;
+  border-bottom: 1px solid #ff0000;
+  color: #ff0000; }
+
+.contactname > input {
+  margin-top: 30px;
+  height: 35px;
+  font-size: 36px;
+  font-family: "HelveticaNeueLight", sans-serif; }
+  @media screen and (max-width: 720px) {
+    .contactname > input {
+      margin: 15px 0 10px 0;
+      height: 30px;
+      font-size: 22px; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.showdetails {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards; }
+
+.hidedetails {
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fadeOut;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards; }
